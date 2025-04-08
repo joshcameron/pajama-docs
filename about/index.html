@@ -611,11 +611,11 @@
 instead of forcing them to learn something new.</p>
 <p>Software developers already know how to build code. A C++ developer, for example, knows how to use a compiler to turn a source code file into an object file, and how to then use a linker to combine object files into a library or executable. They've known this since their very first days working with a compiled language. However, as software projects grow, it quickly becomes necessary to automate these manual steps. Otherwise the build process becomes time consuming and error prone.</p>
 <h2 id="enter-the-build-system">Enter the build system.<a class="headerlink" href="#enter-the-build-system" title="Permanent link">&para;</a></h2>
-<p>A build system ensures these steps are done correctly every time, and only as required. But at this point, every build system forces the software developer to learn a new paradigm and syntax to describe to the build system how to create the executable. Every build system, that is, except Pajama. </p>
+<p>A build system ensures these steps are done correctly every time, and only as required. But at this point, every build system forces the software developer to learn a new paradigm and syntax to describe how to create the executable. Every build system, that is, except Pajama.</p>
 <h2 id="pajama-is-different">Pajama is different.<a class="headerlink" href="#pajama-is-different" title="Permanent link">&para;</a></h2>
 <p>Pajama lets software developers work with the build system in ways they've understood since they were beginners.</p>
 <p>Pajama lets software developers describe the steps of a build sequentially. It allows them to use the output artifacts from one build step as input artifacts to the next build step. Pajama infers dependencies between artifacts based on how the build is described. And the build is described using simple Python -- a language most software developers already know.</p>
-<p>Build problems can easily eat up days of a software developer's time. They are often caused by a build system which is difficult to learn and therefore poorly understood. </p>
+<p>Build problems can easily eat up days of a software developer's time. They are often caused by a build system which is difficult to learn and therefore poorly understood.</p>
 <h2 id="win-win-win">Win-win-win.<a class="headerlink" href="#win-win-win" title="Permanent link">&para;</a></h2>
 <p>Pajama improves your software development process in three important ways:</p>
 <ol>
