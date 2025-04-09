@@ -701,31 +701,18 @@
 
 <h1 id="tutorial">Tutorial<a class="headerlink" href="#tutorial" title="Permanent link">&para;</a></h1>
 <h2 id="download-pajama">Download Pajama<a class="headerlink" href="#download-pajama" title="Permanent link">&para;</a></h2>
-<p>link</p>
-<details>
-<summary>Expandable</summary>
-### Header
-1. item
-2. item
-</details>
+<div class="codehilite"><pre><span></span><code>curl ... &lt;command to be added&gt;
+</code></pre></div>
 
 <h2 id="clone-the-tutorial-code">Clone the tutorial code<a class="headerlink" href="#clone-the-tutorial-code" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/pajama-build/pajama-tutorial.git
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/joshcameron/pajama-tutorial.git
 </code></pre></div>
 
 <p>Some additional information</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Tip content</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Note content</p>
-</div>
 <h2 id="install-pajama">Install Pajama<a class="headerlink" href="#install-pajama" title="Permanent link">&para;</a></h2>
-<p>If you would prefer to try out Pajama in a sandboxed way, you can install 
-Pajama in a Python 
-<a href="https://docs.python.org/3/library/venv.html">virtual environment</a> 
+<p>If you would prefer to try out Pajama in a sandboxed way, you can install
+Pajama in a Python
+<a href="https://docs.python.org/3/library/venv.html">virtual environment</a>
 in the tutorial directory:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="n">pajama</span><span class="o">-</span><span class="n">tutorial</span>
 <span class="n">virtualenv</span><span class="w"> </span><span class="o">--</span><span class="n">python</span><span class="o">=</span><span class="n">python3</span><span class="w"> </span><span class="o">.</span><span class="n">venv</span>
@@ -733,7 +720,7 @@ in the tutorial directory:</p>
 <span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">~/</span><span class="n">Downloads</span><span class="o">/</span><span class="n">pajama</span><span class="o">-</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span>
 </code></pre></div>
 
-<p>Or, if you would prefer to not have to activate a virtual environment to test 
+<p>Or, if you would prefer to not have to activate a virtual environment to test
 Pajama, you can install Pajama in your system Python site-packages:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">~/</span><span class="n">Downloads</span><span class="o">/</span><span class="n">pajama</span><span class="o">-</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span>
 </code></pre></div>
@@ -741,26 +728,26 @@ Pajama, you can install Pajama in your system Python site-packages:</p>
 <h2 id="understand-the-project">Understand the project<a class="headerlink" href="#understand-the-project" title="Permanent link">&para;</a></h2>
 <h2 id="a-pajama-project-the-pajama-project-directory">A Pajama project / The .pajama-project directory<a class="headerlink" href="#a-pajama-project-the-pajama-project-directory" title="Permanent link">&para;</a></h2>
 <ul>
-<li>.pajama-project directory identifies the parent directory as the "project directory" -- the root 
-directory of a Pajama project. </li>
+<li><code>.pajama-project</code> directory identifies the parent directory as the "project directory" -- the root
+  directory of a Pajama project.</li>
 <li>When you use the pajama command at the prompt, the first thing it does is attempt to determine
   what pajama project it is working with. It looks in the current directory and upwards through
-  the parent directory hierarchy for a .pajama-project subdirectory.</li>
+  the parent directory hierarchy for a <code>.pajama-project</code> subdirectory.</li>
 </ul>
 <h2 id="pajama-files">.pajama files<a class="headerlink" href="#pajama-files" title="Permanent link">&para;</a></h2>
 <ul>
-<li>.pajama files are Python files. If you already know Python, you already know how to write pajama
+<li><code>.pajama</code> files are Python files. If you already know Python, you already know how to write pajama
   code.</li>
-<li>.pajama file contains instructions on how to build the contents of the source directory
-  containing the .pajama file. </li>
-<li>A .pajama file can include subdirectories (containing .pajama files).</li>
-<li>.pajama files do three (?) things: call functions which invoke actions, modify settings, and
+<li><code>.pajama</code> file contains instructions on how to build the contents of the source directory
+  containing the <code>.pajama</code> file.</li>
+<li>A <code>.pajama</code> file can include subdirectories (containing <code>.pajama</code> files).</li>
+<li><code>.pajama</code> files do three (?) things: call functions which invoke actions, modify settings, and
   include subdirectories.</li>
-<li>Settings are stored in a stack. If a .pajama file includes a subdirectory, when control returns 
-  from the subdirectory to that .pajama file, any settings set in the subdirectory are popped from
+<li>Settings are stored in a stack. If a <code>.pajama</code> file includes a subdirectory, when control returns
+  from the subdirectory to that <code>.pajama</code> file, any settings set in the subdirectory are popped from
   the stack, and the build settings are as they were before the subdirectory was included.</li>
 <li>Settings from a parent directory are inherited by the subdirectory when the parent directory
-  .pajama file includes the subdirectory.</li>
+  <code>.pajama</code> file includes the subdirectory.</li>
 </ul>
 <h2 id="initial-build-full-build-clean-build">Initial build / full build / clean build<a class="headerlink" href="#initial-build-full-build-clean-build" title="Permanent link">&para;</a></h2>
 <p><code>pajama</code></p>
@@ -784,10 +771,9 @@ does only what needs to be done.</p>
 <li>executable</li>
 <li>full build, then incremental: note that incremental is fast</li>
 <li>add .cpp to the build: note that other .cpps don't need to be rebuilt.</li>
-<li></li>
 </ul>
 <h2 id="current-limitations">Current limitations<a class="headerlink" href="#current-limitations" title="Permanent link">&para;</a></h2>
-<p>Pajama is currently in a very early alpha state. 
+<p>Pajama is currently in a very early alpha state.
 Only tested on macOS
 Only toolset is clang
 Many clang flags are not supported -- anything with multiple arguments to the flag (provide
@@ -825,7 +811,7 @@ manually build code from the command line.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamaneers.<br><i>v0.1.20250409041530-61c6949</i>
+      Maintained by Pajamaneers.<br><i>v0.1.20250409122114-d161057</i>
     </div>
   
   
