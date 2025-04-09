@@ -1,3 +1,6 @@
 # pajama-docs
-pajama 0.1.20250409011314\n
+pajama 0.1.20250409011823
+
 Published to https://joshcameron.github.io/pajama-docs
+
+*This file is auto-generated. Do not edit.*
