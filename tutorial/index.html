@@ -701,31 +701,27 @@
 
 <h1 id="tutorial">Tutorial<a class="headerlink" href="#tutorial" title="Permanent link">&para;</a></h1>
 <h2 id="download-pajama">Download Pajama<a class="headerlink" href="#download-pajama" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="nx">curl</span><span class="w"> </span><span class="o">-</span><span class="nx">L</span><span class="w"> </span><span class="o">-</span><span class="nx">o</span><span class="w"> </span><span class="nx">pajama</span><span class="o">-</span><span class="m m-Double">0.1.20250412204214</span><span class="o">-</span><span class="nx">py3</span><span class="o">-</span><span class="nx">none</span><span class="o">-</span><span class="nx">any</span><span class="p">.</span><span class="nx">whl</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//joshcameron.github.io/pajama-docs/package/pajama-0.1.20250412204214-py3-none-any.whl</span>
-<span class="nx">python3</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">pajama</span><span class="o">-</span><span class="m m-Double">0.1.20250412204214</span><span class="o">-</span><span class="nx">py3</span><span class="o">-</span><span class="nx">none</span><span class="o">-</span><span class="nx">any</span><span class="p">.</span><span class="nx">whl</span>
-</code></pre></div>
-
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl -L -o pajama-0.1.20250412224239-py3-none-any.whl https://joshcameron.github.io/pajama-docs/package/pajama-0.1.20250412224239-py3-none-any.whl
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3 -m pip install pajama-0.1.20250412224239-py3-none-any.whl
+</span></code></pre></div>
 <h2 id="clone-the-tutorial-code">Clone the tutorial code<a class="headerlink" href="#clone-the-tutorial-code" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/joshcameron/pajama-tutorial.git
-</code></pre></div>
-
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git clone https://github.com/joshcameron/pajama-tutorial.git
+</span></code></pre></div>
 <p>Some additional information</p>
 <h2 id="install-pajama">Install Pajama<a class="headerlink" href="#install-pajama" title="Permanent link">&para;</a></h2>
 <p>If you would prefer to try out Pajama in a sandboxed way, you can install
 Pajama in a Python
 <a href="https://docs.python.org/3/library/venv.html">virtual environment</a>
 in the tutorial directory:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="n">pajama</span><span class="o">-</span><span class="n">tutorial</span>
-<span class="n">virtualenv</span><span class="w"> </span><span class="o">--</span><span class="n">python</span><span class="o">=</span><span class="n">python3</span><span class="w"> </span><span class="o">.</span><span class="n">venv</span>
-<span class="n">source</span><span class="w"> </span><span class="o">.</span><span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
-<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">~/</span><span class="n">Downloads</span><span class="o">/</span><span class="n">pajama</span><span class="o">-</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span>
-</code></pre></div>
-
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cd pajama-tutorial
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>virtualenv --python=python3 .venv
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>source .venv/bin/activate
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>pip install ~/Downloads/pajama-0.0.1-py3-none-any.whl
+</span></code></pre></div>
 <p>Or, if you would prefer to not have to activate a virtual environment to test
 Pajama, you can install Pajama in your system Python site-packages:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">~/</span><span class="n">Downloads</span><span class="o">/</span><span class="n">pajama</span><span class="o">-</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span>
-</code></pre></div>
-
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip install ~/Downloads/pajama-0.0.1-py3-none-any.whl
+</span></code></pre></div>
 <h2 id="understand-the-project">Understand the project<a class="headerlink" href="#understand-the-project" title="Permanent link">&para;</a></h2>
 <h2 id="a-pajama-project-the-pajama-project-directory">A Pajama project / The .pajama-project directory<a class="headerlink" href="#a-pajama-project-the-pajama-project-directory" title="Permanent link">&para;</a></h2>
 <ul>
@@ -812,7 +808,7 @@ manually build code from the command line.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamaneers.<br><i>v0.1.20250412204214-a8122e1</i>
+      Maintained by Pajamaneers.<br><i>v0.1.20250412224239-e3cdbf7</i>
     </div>
   
   
@@ -833,7 +829,7 @@ manually build code from the command line.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
