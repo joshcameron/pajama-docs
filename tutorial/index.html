@@ -329,24 +329,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-pajama" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Pajama
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#understand-the-project" class="md-nav__link">
     <span class="md-ellipsis">
       Understand the project
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Understand the project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#a-pajama-project-the-pajama-project-directory" class="md-nav__link">
     <span class="md-ellipsis">
       A Pajama project / The .pajama-project directory
@@ -354,13 +346,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pajama-files" class="md-nav__link">
     <span class="md-ellipsis">
       .pajama files
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -620,24 +617,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-pajama" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Pajama
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#understand-the-project" class="md-nav__link">
     <span class="md-ellipsis">
       Understand the project
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Understand the project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#a-pajama-project-the-pajama-project-directory" class="md-nav__link">
     <span class="md-ellipsis">
       A Pajama project / The .pajama-project directory
@@ -645,13 +634,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#pajama-files" class="md-nav__link">
     <span class="md-ellipsis">
       .pajama files
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -716,42 +710,54 @@
 <p>The version number shown here will change as new versions of Pajama are released. If you are
 reading this to reinstall Pajama, first refresh this page.</p>
 </div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>-o<span class="w"> </span>pajama-0.1.20250422192834-py3-none-any.whl<span class="w"> </span>https://joshcameron.github.io/pajama-docs/package/pajama-0.1.20250422192834-py3-none-any.whl
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pajama-0.1.20250422192834-py3-none-any.whl
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>-o<span class="w"> </span>pajama-0.1.20250422230612-py3-none-any.whl<span class="w"> </span>https://joshcameron.github.io/pajama-docs/package/pajama-0.1.20250422230612-py3-none-any.whl
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pajama-0.1.20250422230612-py3-none-any.whl
 </span></code></pre></div>
+<p>The Pajama Python package contains a command line tool called <code>pajama</code> which is used to build
+projects. You can choose to install Pajama in your system Python as shown above, or in a
+virtual environment. If you choose to install Pajama in a virtual environment, you will need to
+activate the virtual environment before running the <code>pajama</code> command.</p>
 <h2 id="clone-the-tutorial-code">Clone the tutorial code<a class="headerlink" href="#clone-the-tutorial-code" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/joshcameron/pajama-tutorial.git
+<p>An example project is available on GitHub. Clone it to your local machine and follow along with the
+documentation below to learn how to use Pajama.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:joshcameron/pajama-tutorial.git
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>pajama-tutorial
 </span></code></pre></div>
 <p>Some additional information</p>
-<h2 id="install-pajama">Install Pajama<a class="headerlink" href="#install-pajama" title="Permanent link">&para;</a></h2>
-<p>If you would prefer to try out Pajama in a sandboxed way, you can install
-Pajama in a Python
-<a href="https://docs.python.org/3/library/venv.html">virtual environment</a>
-in the tutorial directory:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>pajama-tutorial
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>virtualenv<span class="w"> </span>--python<span class="o">=</span>python3<span class="w"> </span>.venv
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>pip<span class="w"> </span>install<span class="w"> </span>~/Downloads/pajama-0.0.1-py3-none-any.whl
-</span></code></pre></div>
-<p>Or, if you would prefer to not have to activate a virtual environment to test
-Pajama, you can install Pajama in your system Python site-packages:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip install ~/Downloads/pajama-0.0.1-py3-none-any.whl
-</span></code></pre></div>
 <h2 id="understand-the-project">Understand the project<a class="headerlink" href="#understand-the-project" title="Permanent link">&para;</a></h2>
-<h2 id="a-pajama-project-the-pajama-project-directory">A Pajama project / The .pajama-project directory<a class="headerlink" href="#a-pajama-project-the-pajama-project-directory" title="Permanent link">&para;</a></h2>
+<p>In pajama-tutorial, you will find a simple C++ project containing the following files and
+directories:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pajama-tutorial
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── .pajama
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├── .pajama-project
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│   └── config.toml
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>└── src
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    ├── .pajama
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    ├── a.cpp
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    ├── a.h
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    ├── b.cpp
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    ├── b.h
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    ├── c.cpp
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    └── main.cpp
+</span></code></pre></div>
+<h3 id="a-pajama-project-the-pajama-project-directory">A Pajama project / The .pajama-project directory<a class="headerlink" href="#a-pajama-project-the-pajama-project-directory" title="Permanent link">&para;</a></h3>
+<p>The <code>.pajama-project</code> directory identifies the parent directory as the "project directory" -- the
+root directory of a Pajama project.</p>
+<p>When you use the <code>pajama</code> command at the prompt, the first thing it does is attempt to determine
+what Pajama project it is working with. It looks in the current directory and upwards through
+the parent directory hierarchy for a <code>.pajama-project</code> subdirectory.</p>
+<p>The <code>.pajama-project</code> directory initially contains a <code>config.toml</code> file, which specifies
+configuration options for the project. As you work with Pajama, other files may be created in this
+directory.</p>
+<h3 id="pajama-files">.pajama files<a class="headerlink" href="#pajama-files" title="Permanent link">&para;</a></h3>
+<p>Your project directory and the <code>src</code> directory below it both contain <code>.pajama</code> files. These files
+describe how to build the project. Each file describes how to build the contents of its directory.</p>
+<p><code>.pajama</code> files are Python files. If you already know Python, you are well on your way to writing
+Pajama code.</p>
+<p>Let's take a look at the <code>.pajama</code> file in the <code>src</code> directory. It looks like this:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>
+</span></code></pre></div>
 <ul>
-<li><code>.pajama-project</code> directory identifies the parent directory as the "project directory" -- the root
-  directory of a Pajama project.</li>
-<li>When you use the pajama command at the prompt, the first thing it does is attempt to determine
-  what pajama project it is working with. It looks in the current directory and upwards through
-  the parent directory hierarchy for a <code>.pajama-project</code> subdirectory.</li>
-</ul>
-<h2 id="pajama-files">.pajama files<a class="headerlink" href="#pajama-files" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>.pajama</code> files are Python files. If you already know Python, you already know how to write pajama
-  code.</li>
-<li><code>.pajama</code> file contains instructions on how to build the contents of the source directory
-  containing the <code>.pajama</code> file.</li>
 <li>A <code>.pajama</code> file can include subdirectories (containing <code>.pajama</code> files).</li>
 <li><code>.pajama</code> files do three (?) things: call functions which invoke actions, modify settings, and
   include subdirectories.</li>
@@ -823,7 +829,7 @@ manually build code from the command line.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamaneers.<br><i>v0.1.20250422192834-4ef7deb</i>
+      Maintained by Pajamaneers.<br><i>v0.1.20250422230612-a35eda3</i>
     </div>
   
   
