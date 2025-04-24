@@ -743,6 +743,7 @@
                 <code>tag</code>
             </td>
             <td>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -758,6 +759,7 @@
                 <code>stacklevel</code>
             </td>
             <td>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -824,6 +826,7 @@ function was called.</p>
                 <code>tag</code>
             </td>
             <td>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -839,6 +842,7 @@ function was called.</p>
                 <code>stacklevel</code>
             </td>
             <td>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -851,6 +855,11 @@ function was called.</p>
           </tr>
       </tbody>
     </table>
+        <p>Example:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">some_string</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;some_string is </span><span class="si">{</span><span class="n">some_string</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># DEBUG filename.py:123 : [untagged] some_string is hello</span>
+</span></code></pre></div></p>
 
     </div>
 
@@ -870,10 +879,53 @@ function was called.</p>
     <div class="doc doc-contents ">
 
         <p>Log the current stack trace.</p>
-<p>Args:</p>
-<div class="codehilite"><pre><span></span><code>    tag: A string that can be used to filter log messages.
-    stacklevel: The number of stack frames to skip when determining the                     location of the log message. The default value of 3 is usually                  appropriate.
-</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>tag</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string that can be used to filter log messages.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;untagged&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>stacklevel</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of stack frames to skip when determining the                     location of the log message. The default value of 3 is usually                  appropriate.</p>
+              </div>
+            </td>
+            <td>
+                  <code>3</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
     </div>
 
@@ -927,6 +979,7 @@ function was called.</p>
                 <code>tag</code>
             </td>
             <td>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -942,6 +995,7 @@ function was called.</p>
                 <code>stacklevel</code>
             </td>
             <td>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1007,6 +1061,7 @@ function was called.</p>
                 <code>tag</code>
             </td>
             <td>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1022,6 +1077,7 @@ function was called.</p>
                 <code>stacklevel</code>
             </td>
             <td>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1087,6 +1143,7 @@ function was called.</p>
                 <code>tag</code>
             </td>
             <td>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1102,6 +1159,7 @@ function was called.</p>
                 <code>stacklevel</code>
             </td>
             <td>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1167,6 +1225,7 @@ function was called.</p>
                 <code>tag</code>
             </td>
             <td>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1182,6 +1241,7 @@ function was called.</p>
                 <code>stacklevel</code>
             </td>
             <td>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1235,7 +1295,7 @@ function was called.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamaneers.<br><i>v0.1.20250423210155-3fd4309</i>
+      Maintained by Pajamaneers.<br><i>v0.1.20250424104239-6311bc5</i>
     </div>
   
   

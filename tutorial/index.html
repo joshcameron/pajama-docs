@@ -704,14 +704,16 @@
 
 
 <h1 id="tutorial">Tutorial<a class="headerlink" href="#tutorial" title="Permanent link">&para;</a></h1>
+<p>This tutorial will walk you through the process of building a simple C++ project using Pajama. The
+project introduces several key Pajama features.</p>
 <h2 id="download-and-install-pajama">Download and Install Pajama<a class="headerlink" href="#download-and-install-pajama" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The version number shown here will change as new versions of Pajama are released. If you are
 reading this to reinstall Pajama, first refresh this page.</p>
 </div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>-o<span class="w"> </span>pajama-0.1.20250423210155-py3-none-any.whl<span class="w"> </span>https://joshcameron.github.io/pajama-docs/pajama-0.1.20250423210155-py3-none-any.whl
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pajama-0.1.20250423210155-py3-none-any.whl
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-LO<span class="w"> </span>https://joshcameron.github.io/pajama-docs/pajama-0.1.20250424104239-py3-none-any.whl
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pajama-0.1.20250424104239-py3-none-any.whl
 </span></code></pre></div>
 <p>The Pajama Python package contains a command line tool called <code>pajama</code> which is used to build
 projects. You can choose to install Pajama in your system Python as shown above, or in a
@@ -727,7 +729,7 @@ documentation below to learn how to use Pajama.</p>
 <h2 id="understand-the-project">Understand the project<a class="headerlink" href="#understand-the-project" title="Permanent link">&para;</a></h2>
 <p>In pajama-tutorial, you will find a simple C++ project containing the following files and
 directories:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pajama-tutorial
+<div class="language-text highlight"><span class="filename">pajama-tutorial directory tree</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pajama-tutorial
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── .pajama
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├── .pajama-project
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│   └── config.toml
@@ -755,10 +757,92 @@ describe how to build the project. Each file describes how to build the contents
 <p><code>.pajama</code> files are Python files. If you already know Python, you are well on your way to writing
 Pajama code.</p>
 <p>Let's take a look at the <code>.pajama</code> file in the <code>src</code> directory. It looks like this:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>
-</span></code></pre></div>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">src/.pajama</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">pajama</span> <span class="kn">import</span> <span class="n">cpp</span><span class="p">,</span> <span class="n">clang</span><span class="p">,</span> <span class="n">libtool</span><span class="p">,</span> <span class="n">settings</span> <span class="c1"># (1)!</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">cpp</span><span class="o">.</span><span class="n">select_compiler</span><span class="p">(</span><span class="s1">&#39;clang.cpp.compiler&#39;</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">libtool</span><span class="o">.</span><span class="n">select</span><span class="p">()</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">a_object</span> <span class="o">=</span> <span class="n">cpp</span><span class="o">.</span><span class="n">compile_to_object</span><span class="p">(</span><span class="s1">&#39;a.cpp&#39;</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">b_object</span> <span class="o">=</span> <span class="n">cpp</span><span class="o">.</span><span class="n">compile_to_object</span><span class="p">(</span><span class="s1">&#39;b.cpp&#39;</span><span class="p">,</span> <span class="s1">&#39;b.o&#39;</span><span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1"># Set to true if you want to link with a static library instead of a dynamic</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1"># library.</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">want_static_lib</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="n">static_lib</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="n">dynamic_lib</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="k">if</span> <span class="n">want_static_lib</span><span class="p">:</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>    <span class="n">static_lib</span> <span class="o">=</span> <span class="n">libtool</span><span class="o">.</span><span class="n">create_library</span><span class="p">(</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a>        <span class="p">[</span><span class="n">a_object</span><span class="p">,</span> <span class="n">b_object</span><span class="p">],</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a>        <span class="s1">&#39;ab&#39;</span><span class="p">,</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a>        <span class="n">dynamic</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a>    <span class="n">dynamic_lib</span> <span class="o">=</span> <span class="n">libtool</span><span class="o">.</span><span class="n">create_library</span><span class="p">(</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>        <span class="p">[</span><span class="n">a_object</span><span class="p">,</span> <span class="n">b_object</span><span class="p">],</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a>        <span class="s1">&#39;ab&#39;</span><span class="p">)</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="n">current_src_dir</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;build.current_src_dir&#39;</span><span class="p">)</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;clang.cpp.flags&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;-I</span><span class="si">{</span><span class="n">current_src_dir</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="n">current_build_dir</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;build.current_build_dir&#39;</span><span class="p">)</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;clang.cpp.flags&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;-L</span><span class="si">{</span><span class="n">current_build_dir</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="c1"># Compile main.cpp and link with the library.</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="n">executable</span> <span class="o">=</span> <span class="n">cpp</span><span class="o">.</span><span class="n">compile_to_executable</span><span class="p">(</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36"></a>    <span class="s1">&#39;main.cpp&#39;</span><span class="p">,</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37"></a>    <span class="n">static_lib</span><span class="o">=</span><span class="n">static_lib</span><span class="p">,</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38"></a>    <span class="n">dynamic_lib</span><span class="o">=</span><span class="n">dynamic_lib</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<ol>
+<li>Just like a standard Python file, we import modules we need in the code below.</li>
+</ol>
+<p>The <code>cpp</code> module is an example of what is called a generic tool. When a function from the <code>cpp</code>
+module is invoked in a <code>.pajama</code> file, the action taken by the function will be performed using the
+currently selected C++ compiler. There are many possible C++ compilers, of course, and in this
+example we select the <code>clang</code> compiler. Using the functions provided by a generic tool like <code>cpp</code>
+allows us to write code which is agnostic of the actual compiler being used. This makes it easy
+to change the compiler used for all or part of the project.</p>
 <ul>
-<li>A <code>.pajama</code> file can include subdirectories (containing <code>.pajama</code> files).</li>
 <li><code>.pajama</code> files do three (?) things: call functions which invoke actions, modify settings, and
   include subdirectories.</li>
 <li>Settings are stored in a stack. If a <code>.pajama</code> file includes a subdirectory, when control returns
@@ -766,6 +850,7 @@ Pajama code.</p>
   the stack, and the build settings are as they were before the subdirectory was included.</li>
 <li>Settings from a parent directory are inherited by the subdirectory when the parent directory
   <code>.pajama</code> file includes the subdirectory.</li>
+<li>A <code>.pajama</code> file can include subdirectories (containing <code>.pajama</code> files).</li>
 </ul>
 <h2 id="initial-build-full-build-clean-build">Initial build / full build / clean build<a class="headerlink" href="#initial-build-full-build-clean-build" title="Permanent link">&para;</a></h2>
 <p><code>pajama</code></p>
@@ -829,7 +914,7 @@ manually build code from the command line.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamaneers.<br><i>v0.1.20250423210155-3fd4309</i>
+      Maintained by Pajamaneers.<br><i>v0.1.20250424104239-6311bc5</i>
     </div>
   
   
