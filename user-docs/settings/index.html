@@ -475,6 +475,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pajama.collection.pajama.settings.contains" class="md-nav__link">
+    <span class="md-ellipsis">
+      contains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pajama.collection.pajama.settings.get" class="md-nav__link">
+    <span class="md-ellipsis">
+      get
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pajama.collection.pajama.settings.set" class="md-nav__link">
     <span class="md-ellipsis">
       set
@@ -533,6 +551,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pajama.collection.pajama.settings.contains" class="md-nav__link">
+    <span class="md-ellipsis">
+      contains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pajama.collection.pajama.settings.get" class="md-nav__link">
+    <span class="md-ellipsis">
+      get
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pajama.collection.pajama.settings.set" class="md-nav__link">
     <span class="md-ellipsis">
       set
@@ -570,7 +606,9 @@
 
         <p>Settings store values to be used later in the build. </p>
 <p>Setting names and types are declared and registered by Pajama toolsets or by Pajama itself. 
-There are two setting types: single-value settings, and dictionary settings.</p>
+There are two setting types: single-value settings, and dictionary settings. Single-value settings 
+consist of a setting name and a value. Dictionary settings consist of a setting name and a 
+dictionary of key-value pairs.</p>
 
 
 
@@ -588,6 +626,176 @@ There are two setting types: single-value settings, and dictionary settings.</p>
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="pajama.collection.pajama.settings.contains" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">contains</span>
+
+
+<a href="#pajama.collection.pajama.settings.contains" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">contains</span><span class="p">(</span><span class="n">setting_name</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Check if a setting with the specified name is in the current settings.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>setting_name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the setting to check.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>True if a setting with the specified name is in the current settings.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="pajama.collection.pajama.settings.get" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get</span>
+
+
+<a href="#pajama.collection.pajama.settings.get" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get</span><span class="p">(</span><span class="n">setting_name</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Get the value of the named setting.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>setting_name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the setting to get. Use of an unregistered setting name will 
+raise an exception.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="pajama.artifact.Artifact">Artifact</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The value of the setting.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="pajama.impl.exception.UseOfUnregisteredSettingName">UseOfUnregisteredSettingName</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the setting name is not registered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 
@@ -625,8 +833,7 @@ There are two setting types: single-value settings, and dictionary settings.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>The name of the setting to set. Use of an unregistered setting name will 
-raise an exception.</p>
+                <p>The name of the setting to set.</p>
               </div>
             </td>
             <td>
@@ -641,10 +848,11 @@ raise an exception.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>The value to set the setting to. For single-value settings, <code>args</code> is a 
-<code>str | Artifact</code>. For dictionary settings, <code>args</code> is usually a
-<code>str</code> key and a <code>str | Artifact</code> value. Callers who need to set the entire dictionary at
-once can pass a <code>DictOfArtifacts</code>. </p>
+                <p>The value to set the setting to. For single-value settings, <code>args</code> is 
+<code>str | Artifact</code>. <code>str</code> values will automatically be converted to <code>StringArtifact</code>.
+For dictionary settings, <code>args</code> is typically <code>str</code> key and <code>str | Artifact</code> value. 
+Again, <code>str</code> values will automatically be converted to <code>StringArtifact</code>.
+Callers who need to set the entire dictionary at once can pass a <code>DictOfArtifacts</code>. </p>
               </div>
             </td>
             <td>
@@ -653,12 +861,41 @@ once can pass a <code>DictOfArtifacts</code>. </p>
           </tr>
       </tbody>
     </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="pajama.impl.exception.UseOfUnregisteredSettingName">UseOfUnregisteredSettingName</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the setting name is not registered.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
         <p>Example:
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">file_artifact</span> <span class="o">=</span> <span class="n">artifact</span><span class="o">.</span><span class="n">FileArtifact</span><span class="p">(</span><span class="s1">&#39;foo.c&#39;</span><span class="p">)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;some_toolset.some_file&#39;</span><span class="p">,</span> <span class="n">file_artifact</span><span class="p">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;some_toolset.some_string&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;some_toolset.some_dict&#39;</span><span class="p">,</span> <span class="s1">&#39;key_name&#39;</span><span class="p">,</span> <span class="s1">&#39;some value&#39;</span><span class="p">)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;some_toolset.some_dict&#39;</span><span class="p">,</span> <span class="s1">&#39;another_key_name&#39;</span><span class="p">,</span> <span class="s1">&#39;a different value&#39;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Set a single-value setting to an artifact value.</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;some_toolset.some_file&#39;</span><span class="p">,</span> <span class="n">file_artifact</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Set a single-value setting to a string value.</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;some_toolset.some_string&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># Set dictionary settings to key-value pairs.</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;some_toolset.some_dict&#39;</span><span class="p">,</span> <span class="s1">&#39;key_name&#39;</span><span class="p">,</span> <span class="n">file_artifact</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;some_toolset.some_dict&#39;</span><span class="p">,</span> <span class="s1">&#39;another_key_name&#39;</span><span class="p">,</span> <span class="s1">&#39;a different value&#39;</span><span class="p">)</span>
 </span></code></pre></div></p>
 
     </div>
@@ -701,7 +938,7 @@ once can pass a <code>DictOfArtifacts</code>. </p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamaneers.<br><i>v0.1.20250424104239-6311bc5</i>
+      Maintained by Pajamaneers.<br><i>v0.1.20250427025510-e4ce1a9</i>
     </div>
   
   

@@ -420,9 +420,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pajama.collection.pajama.cpp.select_abstract_tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      select_abstract_tool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pajama.collection.pajama.cpp.select_compiler" class="md-nav__link">
     <span class="md-ellipsis">
       select_compiler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pajama.collection.pajama.cpp.select_tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      select_tool
     </span>
   </a>
   
@@ -589,9 +607,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pajama.collection.pajama.cpp.select_abstract_tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      select_abstract_tool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pajama.collection.pajama.cpp.select_compiler" class="md-nav__link">
     <span class="md-ellipsis">
       select_compiler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pajama.collection.pajama.cpp.select_tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      select_tool
     </span>
   </a>
   
@@ -842,6 +878,88 @@
 <div class="doc doc-object doc-function">
 
 
+<h2 id="pajama.collection.pajama.cpp.select_abstract_tool" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">select_abstract_tool</span>
+
+
+<a href="#pajama.collection.pajama.cpp.select_abstract_tool" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">select_abstract_tool</span><span class="p">(</span><span class="n">tool_id</span><span class="p">,</span> <span class="n">setting_name</span><span class="p">,</span> <span class="n">abstract_cls</span><span class="p">,</span> <span class="n">min_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_version</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Request the use of the specified type of tool in the specified version range.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>tool_id</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The id of the compiler to use.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>min_version</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The minimum version of the compiler to use.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>max_version</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The maximum version of the compiler to use.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h2 id="pajama.collection.pajama.cpp.select_compiler" class="doc doc-heading">
             <span class="doc doc-object-name doc-function-name">select_compiler</span>
 
@@ -853,6 +971,88 @@
     <div class="doc doc-contents ">
 
         <p>Request the use of the specified compiler in the specified version range.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>tool_id</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The id of the compiler to use.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>min_version</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The minimum version of the compiler to use.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>max_version</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The maximum version of the compiler to use.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="pajama.collection.pajama.cpp.select_tool" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">select_tool</span>
+
+
+<a href="#pajama.collection.pajama.cpp.select_tool" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">select_tool</span><span class="p">(</span><span class="n">tool_id</span><span class="p">,</span> <span class="n">setting_name</span><span class="p">,</span> <span class="n">expected_cls</span><span class="p">,</span> <span class="n">min_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_version</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Request the use of the specified type of tool in the specified version range.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -957,7 +1157,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamaneers.<br><i>v0.1.20250424104239-6311bc5</i>
+      Maintained by Pajamaneers.<br><i>v0.1.20250427025510-e4ce1a9</i>
     </div>
   
   
