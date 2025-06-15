@@ -594,9 +594,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#full-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      full build
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#implicit-dependency" class="md-nav__link">
     <span class="md-ellipsis">
       implicit dependency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incremental-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      incremental build
     </span>
   </a>
   
@@ -806,9 +824,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#full-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      full build
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#implicit-dependency" class="md-nav__link">
     <span class="md-ellipsis">
       implicit dependency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incremental-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      incremental build
     </span>
   </a>
   
@@ -918,9 +954,6 @@
                 
                   
 
-  
-  
-
 
   <h1>Glossary</h1>
 
@@ -941,10 +974,15 @@ abstract tool defines a set of functions which would be implemented by concrete 
 <h2 id="discovery">discovery<a class="headerlink" href="#discovery" title="Permanent link">&para;</a></h2>
 <p>The process of searching for a concrete tool on the user's system. This process is specific to the
 tool, and involves looking in the places the tool is commonly installed.</p>
+<h2 id="full-build">full build<a class="headerlink" href="#full-build" title="Permanent link">&para;</a></h2>
+<p>A full build is a build which performs all actions in order to produce all output artifacts.</p>
 <h2 id="implicit-dependency">implicit dependency<a class="headerlink" href="#implicit-dependency" title="Permanent link">&para;</a></h2>
 <p>An artifact which is not explicitly specified as an input artifact to a build action, but is
 implicitly used by the action. For example, a header file included by a source file used in a build
 action is an implicit dependency of that build build action.</p>
+<h2 id="incremental-build">incremental build<a class="headerlink" href="#incremental-build" title="Permanent link">&para;</a></h2>
+<p>An incremental build is a build which only performs actions whose input artifacts have changed, or
+whose output artifacts have been modified or deleted since the previous build.</p>
 <h2 id="input-artifact">input artifact<a class="headerlink" href="#input-artifact" title="Permanent link">&para;</a></h2>
 <p>An artifact which is used as input to a build action. For example, a source file is an input
 artifact to a build action which creates an object file.</p>
@@ -1004,7 +1042,7 @@ artifact of a build action which compiles a source file.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamaneers.<br><i>v0.1.20250614192824-212100a</i>
+      Maintained by Pajamanauts.<br><i>v0.1.20250615183200-048e5bf</i>
     </div>
   
   

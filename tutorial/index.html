@@ -740,9 +740,6 @@
                 
                   
 
-  
-  
-
 
 <h1 id="tutorial">Tutorial<a class="headerlink" href="#tutorial" title="Permanent link">&para;</a></h1>
 <p>This tutorial walks you through the process of building a simple C++ project using Pajama. The
@@ -753,8 +750,8 @@ project introduces several key Pajama features.</p>
 <p>The version number shown here will change as new versions of Pajama are released. If you are
 reading this to reinstall Pajama, first refresh this page.</p>
 </div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-LO<span class="w"> </span>https://joshcameron.github.io/pajama-docs/pajama-0.1.20250614192824-py3-none-any.whl
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pajama-0.1.20250614192824-py3-none-any.whl
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-LO<span class="w"> </span>https://joshcameron.github.io/pajama-docs/pajama-0.1.20250615183200-py3-none-any.whl
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pajama-0.1.20250615183200-py3-none-any.whl
 </span></code></pre></div>
 <p>The Pajama Python package contains a command line tool called <code>pajama</code> which is used to build
 projects. You can choose to install Pajama in your system Python as shown above, or in a
@@ -766,7 +763,6 @@ documentation below to learn how to use Pajama.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:joshcameron/pajama-tutorial.git
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>pajama-tutorial
 </span></code></pre></div>
-<p>Some additional information</p>
 <h2 id="understand-the-project">Understand the project<a class="headerlink" href="#understand-the-project" title="Permanent link">&para;</a></h2>
 <p>In pajama-tutorial, you will find a simple C++ project containing the following files and
 directories:</p>
@@ -884,7 +880,7 @@ an ordinary Python variable.</p>
 <p>The return values of <code>settings.get()</code>, <code>cpp.compile_to_object()</code>, <code>libtool.create_library()</code> and
 <code>cpp.compile_to_executable()</code> are all build artifacts. Artifacts represent entities like files,
 directories, and strings used in the build process. Some artifacts are created by actions of the
-build process, while others -- such as source files -- exist prior to the invocation of the build.</p>
+build process, while others -- such as source files -- exist prior to invoking the build.</p>
 <!--
 - `.pajama` files do three (?) things: call functions which invoke actions, modify settings, and
   include subdirectories.
@@ -897,18 +893,36 @@ build process, while others -- such as source files -- exist prior to the invoca
 -->
 
 <h2 id="initial-build-full-build-clean-build">Initial build / full build / clean build<a class="headerlink" href="#initial-build-full-build-clean-build" title="Permanent link">&para;</a></h2>
-<p><code>pajama</code></p>
-<p>Later:</p>
-<p><code>pajama --clean</code></p>
+<p>To build pajama-tutorial for the first time:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cd pajama-tutorial
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>pajama build --clean
+</span></code></pre></div>
+<p>The <code>pajama build --clean</code> command deletes all existing output artifacts (if any) and performs a
+<a href="../glossary/#full-build" title="A build which performs all actions in order to produce all output artifacts.">full build</a> -- all actions necessary to build all output artifacts described by the
+build's <code>.pajama</code> files.</p>
+<p>If ever you want to ensure every output artifact of your project gets rebuilt, you can do so with
+<code>pajama build --clean</code>.</p>
 <h2 id="incremental-build">Incremental build<a class="headerlink" href="#incremental-build" title="Permanent link">&para;</a></h2>
-<p><code>pajama</code></p>
-<p>What's different? Pajama has inferred the dependencies of the build based on how build
-artifacts are created from other artifacts. For example, main.cpp is input artifact to a build
-action which creates output artifact a.out. Pajama has also cached information about the actions
-performed in the previous build. It knows that if main.cpp has not been modified, and the settings
-relevant to the action which creates a.out have not changed, then a.out does not need to be
-created again (assuming it still exists and hasn't been modified since the previous build). Pajama
-does only what needs to be done.</p>
+<p>During your day to day work, you will typically perform an <a href="../glossary/#incremental-build" title="A build which only performs actions whose inputs have changed, or whose outputs have been modified or deleted since the previous build.">incremental
+build</a>. This means using Pajama to build only the output artifacts which need
+to be built, based on the current state of the project. For example, if you modify <code>main.cpp</code>,
+you can run:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pajama build
+</span></code></pre></div>
+<p>Pajama will then only rebuild the output artifacts which depend on <code>main.cpp</code>, such as <code>a.out</code>, the
+executable created from <code>main.cpp</code>. It will not rebuild the static or dynamic libraries, since
+neither <code>a.cpp</code> nor <code>b.cpp</code> have changed.</p>
+<p>Pajama infers the dependencies of the build based on how build artifacts are created from other
+artifacts. For example, <code>main.cpp</code> is an input artifact to a build action which creates output
+artifact <code>a.out</code>. Pajama has also cached information about the actions performed in the previous
+build. It knows if <code>main.cpp</code> has not been modified, and the settings relevant to the action which
+creates <code>a.out</code> have not changed, then <code>a.out</code> does not need to be created again. In an <a href="../glossary/#incremental-build" title="A build which only performs actions whose inputs have changed, or whose outputs have been modified or deleted since the previous build.">incremental
+build</a>, Pajama does only what needs to be done.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When building a project for the first time, a <code>pajama build</code> command is equivalent to a <code>pajama
+build --clean</code> command, because none of the output artifacts exist yet.</p>
+</div>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Library to share code among multiple applications</li>
@@ -972,7 +986,7 @@ manually build code from the command line.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamaneers.<br><i>v0.1.20250614192824-212100a</i>
+      Maintained by Pajamanauts.<br><i>v0.1.20250615183200-048e5bf</i>
     </div>
   
   
