@@ -750,8 +750,8 @@ project introduces several key Pajama features.</p>
 <p>The version number shown here will change as new versions of Pajama are released. If you are
 reading this to reinstall Pajama, first refresh this page.</p>
 </div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-LO<span class="w"> </span>https://joshcameron.github.io/pajama-docs/pajama-0.1.20250622155114-py3-none-any.whl
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pajama-0.1.20250622155114-py3-none-any.whl
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-LO<span class="w"> </span>https://joshcameron.github.io/pajama-docs/pajama-0.1.20250629025552-py3-none-any.whl
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pajama-0.1.20250629025552-py3-none-any.whl
 </span></code></pre></div>
 <p>The Pajama Python package contains a command line tool called <code>pajama</code> which is used to build
 projects. You can choose to install Pajama in your system Python as shown above, or in a
@@ -934,14 +934,16 @@ build --clean</code> command, because none of the output artifacts exist yet.</p
 <li>add .cpp to the build: note that other .cpps don't need to be rebuilt.</li>
 </ul>
 <h2 id="current-limitations">Current limitations<a class="headerlink" href="#current-limitations" title="Permanent link">&para;</a></h2>
-<p>Pajama is currently in a very early alpha state.
-Only tested on macOS
-Only toolset is clang
-Many clang flags are not supported -- anything with multiple arguments to the flag (provide
-examples)
-Parallelism not supported
-Focus has been on demonstrating the key differentiating feature of pajama: it allows you to work
-with the build system in a much more intuitive way, because it's so similar to how you would
+<p>Pajama is currently in a very early alpha state.</p>
+<ul>
+<li>It is only tested on macOS</li>
+<li>The only supported toolset is clang</li>
+<li>Esoteric clang flags might not work. Let me know if something you need is not
+  supported.</li>
+<li>Parallelism is not yet supported.</li>
+</ul>
+<p>The focus is on demonstrating the key differentiating feature of Pajama: it allows you to work
+with the build system in a more intuitive way, because it's so similar to how you would
 manually build code from the command line.</p>
 <!-- Google tag (gtag.js) -->
 <p><script
@@ -986,7 +988,7 @@ manually build code from the command line.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamanauts.<br><i>v0.1.20250622155114-31f5704</i>
+      Maintained by Pajamanauts.<br><i>v0.1.20250629025552-e3cc35b</i>
     </div>
   
   
