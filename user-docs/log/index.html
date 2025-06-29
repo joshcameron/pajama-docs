@@ -62,7 +62,74 @@
 
     
     
-    
+     
+<!-- PostHog -->
+<script>
+	!(function (t, e) {
+		var o, n, p, r;
+		e.__SV ||
+			((window.posthog = e),
+			(e._i = []),
+			(e.init = function (i, s, a) {
+				function g(t, e) {
+					var o = e.split('.');
+					(2 == o.length && ((t = t[o[0]]), (e = o[1])),
+						(t[e] = function () {
+							t.push(
+								[e].concat(
+									Array.prototype.slice.call(arguments, 0),
+								),
+							);
+						}));
+				}
+				(((p = t.createElement('script')).type = 'text/javascript'),
+					(p.crossOrigin = 'anonymous'),
+					(p.async = !0),
+					(p.src =
+						s.api_host.replace(
+							'.i.posthog.com',
+							'-assets.i.posthog.com',
+						) + '/static/array.js'),
+					(r =
+						t.getElementsByTagName(
+							'script',
+						)[0]).parentNode.insertBefore(p, r));
+				var u = e;
+				for (
+					void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+						u.people = u.people || [],
+						u.toString = function (t) {
+							var e = 'posthog';
+							return (
+								'posthog' !== a && (e += '.' + a),
+								t || (e += ' (stub)'),
+								e
+							);
+						},
+						u.people.toString = function () {
+							return u.toString(1) + '.people (stub)';
+						},
+						o =
+							'init Ie Ts Ms Ee Es Rs capture Ge calculateEventProperties Os register register_once register_for_session unregister unregister_for_session js getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ds Fs createPersonProfile Ls Ps opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Cs debug I As getPageViewId captureTraceFeedback captureTraceMetric'.split(
+								' ',
+							),
+						n = 0;
+					n < o.length;
+					n++
+				)
+					g(u, o[n]);
+				e._i.push([i, s, a]);
+			}),
+			(e.__SV = 1));
+	})(document, window.posthog || []);
+	posthog.init('phc_GujJKvXPMnV8tNYAbHsfAcQtQXAJ7mtO2yNI7MdlxSx', {
+		api_host: 'https://us.i.posthog.com',
+		defaults: '2025-05-24',
+		person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+	});
+</script>
+
+
   </head>
   
   
@@ -747,6 +814,20 @@
     <div class="doc doc-contents ">
 
         <p>Log a critical error message.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -770,6 +851,20 @@
             <td>
               <div class="doc-md-description">
                 <p>The message to log.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -786,6 +881,20 @@
             <td>
               <div class="doc-md-description">
                 <p>A string that can be used to filter log messages.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -802,6 +911,20 @@
             <td>
               <div class="doc-md-description">
                 <p>The number of stack frames to skip when determining the                     location of the log message. The default value of 3 is usually                  appropriate.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -830,6 +953,20 @@
 
         <p>Log a debug message. Debug messages are prefaced with the file and line number where this
 function was called.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -853,6 +990,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The message to log.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -869,6 +1020,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>A string that can be used to filter log messages.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -885,6 +1050,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The number of stack frames to skip when determining the                     location of the log message. The default value of 3 is usually                  appropriate.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -898,6 +1077,20 @@ function was called.</p>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;some_string is </span><span class="si">{</span><span class="n">some_string</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># DEBUG filename.py:123 : [untagged] some_string is hello</span>
 </span></code></pre></div></p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
     </div>
 
@@ -917,6 +1110,20 @@ function was called.</p>
     <div class="doc doc-contents ">
 
         <p>Log the current stack trace.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -940,6 +1147,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>A string that can be used to filter log messages.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -956,6 +1177,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The number of stack frames to skip when determining the                     location of the log message. The default value of 3 is usually                  appropriate.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -983,6 +1218,20 @@ function was called.</p>
     <div class="doc doc-contents ">
 
         <p>Log an error message.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1006,6 +1255,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The message to log.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1022,6 +1285,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>A string that can be used to filter log messages.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1038,6 +1315,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The number of stack frames to skip when determining the                     location of the log message. The default value of 3 is usually                  appropriate.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1065,6 +1356,20 @@ function was called.</p>
     <div class="doc doc-contents ">
 
         <p>Log an informational message.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1088,6 +1393,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The message to log.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1104,6 +1423,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>A string that can be used to filter log messages.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1120,6 +1453,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The number of stack frames to skip when determining the                     location of the log message. The default value of 3 is usually                  appropriate.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1147,6 +1494,20 @@ function was called.</p>
     <div class="doc doc-contents ">
 
         <p>Log a verbose debug message. A verbose debug message provides additional detail, and    is only logged if the verbose flag is set.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1170,6 +1531,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The message to log.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1186,6 +1561,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>A string that can be used to filter log messages.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1202,6 +1591,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The number of stack frames to skip when determining the                     location of the log message. The default value of 3 is usually                  appropriate.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1229,6 +1632,20 @@ function was called.</p>
     <div class="doc doc-contents ">
 
         <p>Log a warning message.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1252,6 +1669,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The message to log.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1268,6 +1699,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>A string that can be used to filter log messages.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1284,6 +1729,20 @@ function was called.</p>
             <td>
               <div class="doc-md-description">
                 <p>The number of stack frames to skip when determining the                     location of the log message. The default value of 3 is usually                  appropriate.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -1303,7 +1762,20 @@ function was called.</p>
 
     </div>
 
-</div>
+</div><!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 
@@ -1333,7 +1805,7 @@ function was called.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamanauts.<br><i>v0.1.20250629030535-96f1547</i>
+      Maintained by Pajamanauts.<br><i>v0.1.20250629033902-c5b6b2f</i>
     </div>
   
   

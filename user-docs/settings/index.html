@@ -62,7 +62,74 @@
 
     
     
-    
+     
+<!-- PostHog -->
+<script>
+	!(function (t, e) {
+		var o, n, p, r;
+		e.__SV ||
+			((window.posthog = e),
+			(e._i = []),
+			(e.init = function (i, s, a) {
+				function g(t, e) {
+					var o = e.split('.');
+					(2 == o.length && ((t = t[o[0]]), (e = o[1])),
+						(t[e] = function () {
+							t.push(
+								[e].concat(
+									Array.prototype.slice.call(arguments, 0),
+								),
+							);
+						}));
+				}
+				(((p = t.createElement('script')).type = 'text/javascript'),
+					(p.crossOrigin = 'anonymous'),
+					(p.async = !0),
+					(p.src =
+						s.api_host.replace(
+							'.i.posthog.com',
+							'-assets.i.posthog.com',
+						) + '/static/array.js'),
+					(r =
+						t.getElementsByTagName(
+							'script',
+						)[0]).parentNode.insertBefore(p, r));
+				var u = e;
+				for (
+					void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+						u.people = u.people || [],
+						u.toString = function (t) {
+							var e = 'posthog';
+							return (
+								'posthog' !== a && (e += '.' + a),
+								t || (e += ' (stub)'),
+								e
+							);
+						},
+						u.people.toString = function () {
+							return u.toString(1) + '.people (stub)';
+						},
+						o =
+							'init Ie Ts Ms Ee Es Rs capture Ge calculateEventProperties Os register register_once register_for_session unregister unregister_for_session js getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ds Fs createPersonProfile Ls Ps opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Cs debug I As getPageViewId captureTraceFeedback captureTraceMetric'.split(
+								' ',
+							),
+						n = 0;
+					n < o.length;
+					n++
+				)
+					g(u, o[n]);
+				e._i.push([i, s, a]);
+			}),
+			(e.__SV = 1));
+	})(document, window.posthog || []);
+	posthog.init('phc_GujJKvXPMnV8tNYAbHsfAcQtQXAJ7mtO2yNI7MdlxSx', {
+		api_host: 'https://us.i.posthog.com',
+		defaults: '2025-05-24',
+		person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+	});
+</script>
+
+
   </head>
   
   
@@ -649,6 +716,20 @@
 There are two setting types: single-value settings, and dictionary settings. Single-value settings 
 consist of a setting name and a value. Dictionary settings consist of a setting name and a 
 dictionary of key-value pairs.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 
@@ -681,6 +762,20 @@ dictionary of key-value pairs.</p>
     <div class="doc doc-contents ">
 
         <p>Check if a setting with the specified name is in the current settings.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -704,6 +799,20 @@ dictionary of key-value pairs.</p>
             <td>
               <div class="doc-md-description">
                 <p>The name of the setting to check.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -730,6 +839,20 @@ dictionary of key-value pairs.</p>
             <td>
               <div class="doc-md-description">
                 <p>True if a setting with the specified name is in the current settings.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
           </tr>
@@ -754,6 +877,20 @@ dictionary of key-value pairs.</p>
     <div class="doc doc-contents ">
 
         <p>Get the value of the named setting.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -778,6 +915,20 @@ dictionary of key-value pairs.</p>
               <div class="doc-md-description">
                 <p>The name of the setting to get. Use of an unregistered setting name will 
 raise an exception.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -804,6 +955,20 @@ raise an exception.</p>
             <td>
               <div class="doc-md-description">
                 <p>The value of the setting.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
           </tr>
@@ -827,6 +992,20 @@ raise an exception.</p>
             <td>
               <div class="doc-md-description">
                 <p>If the setting name is not registered.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
           </tr>
@@ -851,6 +1030,20 @@ raise an exception.</p>
     <div class="doc doc-contents ">
 
         <p>Set the value of the named setting.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -874,6 +1067,20 @@ raise an exception.</p>
             <td>
               <div class="doc-md-description">
                 <p>The name of the setting to set.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -893,6 +1100,20 @@ raise an exception.</p>
 For dictionary settings, <code>args</code> is typically <code>str</code> key and <code>str | Artifact</code> value. 
 Again, <code>str</code> values will automatically be converted to <code>StringArtifact</code>.
 Callers who need to set the entire dictionary at once can pass a <code>DictOfArtifacts</code>. </p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -919,6 +1140,20 @@ Callers who need to set the entire dictionary at once can pass a <code>DictOfArt
             <td>
               <div class="doc-md-description">
                 <p>If the setting name is not registered.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
           </tr>
@@ -939,6 +1174,20 @@ Callers who need to set the entire dictionary at once can pass a <code>DictOfArt
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;some_toolset.some_dict&#39;</span><span class="p">,</span> <span class="s1">&#39;key_name&#39;</span><span class="p">,</span> <span class="n">file_artifact</span><span class="p">)</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">settings</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;some_toolset.some_dict&#39;</span><span class="p">,</span> <span class="s1">&#39;another_key_name&#39;</span><span class="p">,</span> <span class="s1">&#39;a different value&#39;</span><span class="p">)</span>
 </span></code></pre></div></p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
     </div>
 
@@ -950,7 +1199,20 @@ Callers who need to set the entire dictionary at once can pass a <code>DictOfArt
 
     </div>
 
-</div>
+</div><!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 
@@ -980,7 +1242,7 @@ Callers who need to set the entire dictionary at once can pass a <code>DictOfArt
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamanauts.<br><i>v0.1.20250629030535-96f1547</i>
+      Maintained by Pajamanauts.<br><i>v0.1.20250629033902-c5b6b2f</i>
     </div>
   
   

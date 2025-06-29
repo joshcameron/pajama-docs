@@ -62,7 +62,74 @@
 
     
     
-    
+     
+<!-- PostHog -->
+<script>
+	!(function (t, e) {
+		var o, n, p, r;
+		e.__SV ||
+			((window.posthog = e),
+			(e._i = []),
+			(e.init = function (i, s, a) {
+				function g(t, e) {
+					var o = e.split('.');
+					(2 == o.length && ((t = t[o[0]]), (e = o[1])),
+						(t[e] = function () {
+							t.push(
+								[e].concat(
+									Array.prototype.slice.call(arguments, 0),
+								),
+							);
+						}));
+				}
+				(((p = t.createElement('script')).type = 'text/javascript'),
+					(p.crossOrigin = 'anonymous'),
+					(p.async = !0),
+					(p.src =
+						s.api_host.replace(
+							'.i.posthog.com',
+							'-assets.i.posthog.com',
+						) + '/static/array.js'),
+					(r =
+						t.getElementsByTagName(
+							'script',
+						)[0]).parentNode.insertBefore(p, r));
+				var u = e;
+				for (
+					void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+						u.people = u.people || [],
+						u.toString = function (t) {
+							var e = 'posthog';
+							return (
+								'posthog' !== a && (e += '.' + a),
+								t || (e += ' (stub)'),
+								e
+							);
+						},
+						u.people.toString = function () {
+							return u.toString(1) + '.people (stub)';
+						},
+						o =
+							'init Ie Ts Ms Ee Es Rs capture Ge calculateEventProperties Os register register_once register_for_session unregister unregister_for_session js getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ds Fs createPersonProfile Ls Ps opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Cs debug I As getPageViewId captureTraceFeedback captureTraceMetric'.split(
+								' ',
+							),
+						n = 0;
+					n < o.length;
+					n++
+				)
+					g(u, o[n]);
+				e._i.push([i, s, a]);
+			}),
+			(e.__SV = 1));
+	})(document, window.posthog || []);
+	posthog.init('phc_GujJKvXPMnV8tNYAbHsfAcQtQXAJ7mtO2yNI7MdlxSx', {
+		api_host: 'https://us.i.posthog.com',
+		defaults: '2025-05-24',
+		person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+	});
+</script>
+
+
   </head>
   
   
@@ -645,6 +712,20 @@
     <div class="doc doc-contents first">
 
         <p>Implements typical filesystem functionality, such as copying files and directories.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 
@@ -678,6 +759,20 @@
 
         <p>Copy a directory.</p>
 <p>Recursively copy the specified directory to the specified destination directory.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -702,6 +797,20 @@
               <div class="doc-md-description">
                 <p>The source directory. If <code>str</code>, <code>src_dir</code> can be an absolute path or a path 
 relative to setting <code>build.current_src_dir</code>.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -719,6 +828,20 @@ relative to setting <code>build.current_src_dir</code>.</p>
               <div class="doc-md-description">
                 <p>The destination directory. If <code>str</code>, <code>dst_dir</code> must be a path relative to setting
 <code>build.current_build_dir</code>. </p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -732,6 +855,20 @@ relative to setting <code>build.current_src_dir</code>.</p>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">some_string</span><span class="p">)</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="mi">5</span>
 </span></code></pre></div></p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
     </div>
 
@@ -752,6 +889,20 @@ relative to setting <code>build.current_src_dir</code>.</p>
 
         <p>Copy a file.</p>
 <p>Copy the specified file to the specified directory. The copy can be given a new name.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -775,6 +926,20 @@ relative to setting <code>build.current_src_dir</code>.</p>
             <td>
               <div class="doc-md-description">
                 <p>Source file path (absolute, or relative to setting <code>build.current_src_dir</code>).</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -791,6 +956,20 @@ relative to setting <code>build.current_src_dir</code>.</p>
             <td>
               <div class="doc-md-description">
                 <p>Destination directory path (absolute, or relative to setting <code>build.current_build_dir</code>).</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -807,6 +986,20 @@ relative to setting <code>build.current_src_dir</code>.</p>
             <td>
               <div class="doc-md-description">
                 <p>(Optional) New name for the copied file.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -834,6 +1027,20 @@ relative to setting <code>build.current_src_dir</code>.</p>
     <div class="doc doc-contents ">
 
         <p>Make a directory, and any necessary non-existent parent directories.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -857,6 +1064,20 @@ relative to setting <code>build.current_src_dir</code>.</p>
             <td>
               <div class="doc-md-description">
                 <p>The path of the directory to be created, relative to the current build directory.</p>
+<!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
               </div>
             </td>
             <td>
@@ -876,7 +1097,20 @@ relative to setting <code>build.current_src_dir</code>.</p>
 
     </div>
 
-</div>
+</div><!-- Google Analytics -->
+<p><script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LQ67DE40ZQ"
+></script></p>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LQ67DE40ZQ');
+</script>
 
 
 
@@ -906,7 +1140,7 @@ relative to setting <code>build.current_src_dir</code>.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamanauts.<br><i>v0.1.20250629030535-96f1547</i>
+      Maintained by Pajamanauts.<br><i>v0.1.20250629033902-c5b6b2f</i>
     </div>
   
   
