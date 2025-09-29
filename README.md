@@ -1,5 +1,5 @@
 # pajama-docs
-pajama 0.1.20250824204825
+pajama 0.1.20250929024312
 
 Published to https://joshcameron.github.io/pajama-docs
 

@@ -535,9 +535,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
+  <a href="#action-build-action" class="md-nav__link">
     <span class="md-ellipsis">
-      action
+      action / build action
     </span>
   </a>
   
@@ -616,6 +616,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#function-build-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      function / build function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#implicit-dependency" class="md-nav__link">
     <span class="md-ellipsis">
       implicit dependency
@@ -646,6 +655,15 @@
   <a href="#inventory" class="md-nav__link">
     <span class="md-ellipsis">
       inventory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invoked" class="md-nav__link">
+    <span class="md-ellipsis">
+      invoked
     </span>
   </a>
   
@@ -765,9 +783,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
+  <a href="#action-build-action" class="md-nav__link">
     <span class="md-ellipsis">
-      action
+      action / build action
     </span>
   </a>
   
@@ -846,6 +864,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#function-build-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      function / build function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#implicit-dependency" class="md-nav__link">
     <span class="md-ellipsis">
       implicit dependency
@@ -876,6 +903,15 @@
   <a href="#inventory" class="md-nav__link">
     <span class="md-ellipsis">
       inventory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invoked" class="md-nav__link">
+    <span class="md-ellipsis">
+      invoked
     </span>
   </a>
   
@@ -974,8 +1010,10 @@
 <p>Defines a set of functions to be implemented by a concrete tool. For example, the <code>cpp.compiler</code>
 abstract tool defines a set of functions which would be implemented by concrete tools
 <code>clang.cpp.compiler</code> and <code>gcc.cpp.compiler</code>.</p>
-<h2 id="action">action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h2>
-<p>A build action takes one or more input artifacts and produces one or more output artifacts.</p>
+<h2 id="action-build-action">action / build action<a class="headerlink" href="#action-build-action" title="Permanent link">&para;</a></h2>
+<p>A build action takes one or more input artifacts and produces one or more output artifacts. Creating
+a build action (typically in a build function) "invokes" the action. Actions are not intended to be
+created directly by users in their <code>.pajama</code> files.</p>
 <h2 id="artifact">artifact<a class="headerlink" href="#artifact" title="Permanent link">&para;</a></h2>
 <p>Represents an entity like a file, directory, string, or other object used in the build process.</p>
 <h2 id="build-configuration">build configuration<a class="headerlink" href="#build-configuration" title="Permanent link">&para;</a></h2>
@@ -989,6 +1027,9 @@ abstract tool defines a set of functions which would be implemented by concrete 
 tool, and involves looking in the places the tool is commonly installed.</p>
 <h2 id="full-build">full build<a class="headerlink" href="#full-build" title="Permanent link">&para;</a></h2>
 <p>A full build is a build which performs all actions in order to produce all output artifacts.</p>
+<h2 id="function-build-function">function / build function<a class="headerlink" href="#function-build-function" title="Permanent link">&para;</a></h2>
+<p>A Python function which creates one or more build actions. Build functions are typically called from
+a <code>.pajama</code> file.</p>
 <h2 id="implicit-dependency">implicit dependency<a class="headerlink" href="#implicit-dependency" title="Permanent link">&para;</a></h2>
 <p>An artifact which is not explicitly specified as an input artifact to a build action, but is
 implicitly used by the action. For example, a header file included by a source file used in a build
@@ -1001,6 +1042,8 @@ whose output artifacts have been modified or deleted since the previous build.</
 artifact to a build action which creates an object file.</p>
 <h2 id="inventory">inventory<a class="headerlink" href="#inventory" title="Permanent link">&para;</a></h2>
 <p>All the collections -- and hence all the toolsets and tools -- available to the build process.</p>
+<h2 id="invoked">invoked<a class="headerlink" href="#invoked" title="Permanent link">&para;</a></h2>
+<p>When a build action is created by a build function, it is said to be invoked.</p>
 <h2 id="named-artifact">named artifact<a class="headerlink" href="#named-artifact" title="Permanent link">&para;</a></h2>
 <p>An artifact which is assigned a name, so it can be referenced by that name elsewhere in the build.</p>
 <h2 id="output-artifact">output artifact<a class="headerlink" href="#output-artifact" title="Permanent link">&para;</a></h2>
@@ -1055,7 +1098,7 @@ artifact of a build action which compiles a source file.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Maintained by Pajamanauts.<br><i>v0.1.20250824204825-278deea</i>
+      Maintained by Pajamanauts.<br><i>v0.1.20250929024312-4cd9f0b</i>
     </div>
   
   
